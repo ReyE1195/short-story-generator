@@ -20,11 +20,11 @@ export default
     const [error, setError] = useState("");
 
     const addRow = () => setSlotRows([...slotRows, { name: "", values: "" }]);
-    const updateRow = (i, field, val) => {
-        const next = [...slotRows];
-        next[i][field] = val;
-        setSlotRows(next);
-    };
+        const updateRow = (i, field, val) => {
+            const next = [...slotRows];
+            next[i] = { ...next[i], [field]: val };
+            setSlotRows(next);
+        };
     const removeRow = (i) => setSlotRows(slotRows.filter((_, idx) => idx !== i));
 
     const handleSubmit = () => {

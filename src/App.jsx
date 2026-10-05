@@ -29,8 +29,6 @@ export default function App() {
     return map;
   });
 
-  const [lockStory, setLockStory] = useState(false);
-  const [lockWords, setLockWords] = useState(false);
   const [showBuilder, setShowBuilder] = useState(false);
 
   // Look the active story up in the FULL pool, since Generate can land on a hidden one.
@@ -48,17 +46,10 @@ export default function App() {
   };
 
   const handleGenerate = () => {
-    let nextStory = story;
-    if (!lockStory && generationPool.length > 1) {
-      const others = generationPool.filter((s) => s.id !== story.id);
-      nextStory = pick(others);
-      setSelectedId(nextStory.id);
-    }
-    if (!lockWords) {
-      setValuesByStory((prev) => ({ ...prev, [nextStory.id]: randomValuesFor(nextStory) }));
-    } else if (!valuesByStory[nextStory.id]) {
-      setValuesByStory((prev) => ({ ...prev, [nextStory.id]: defaultValuesFor(nextStory) }));
-    }
+    const others = generationPool.filter((s) => s.id !== story.id);
+    const nextStory = others.length > 0 ? pick(others) : story;
+    setSelectedId(nextStory.id);
+    setValuesByStory((prev) => ({ ...prev, [nextStory.id]: randomValuesFor(nextStory) }));
   };
 
   const handleSelectStory = (id) => {
@@ -100,8 +91,7 @@ export default function App() {
                 fontFamily: "system-ui, sans-serif",
               }}
           >
-            Click any underlined word in the story to swap it. Use Generate to roll new words, a
-            new story, or both.
+            Click any underlined word in the story to swap it, or hit Generate for a brand-new story.
           </p>
 
           <StoryPicker
@@ -140,14 +130,8 @@ export default function App() {
                   <StoryText story={story} values={currentValues} onCycle={cycleSlot} accent={story.accent} />
                 </div>
 
-                <StoryControls
-                    onGenerate={handleGenerate}
-                    lockStory={lockStory}
-                    onToggleLockStory={() => setLockStory((v) => !v)}
-                    lockWords={lockWords}
-                    onToggleLockWords={() => setLockWords((v) => !v)}
-                />
-              </>
+                <StoryControls onGenerate={handleGenerate} />
+                </>
           )}
 
           {showBuilder && (

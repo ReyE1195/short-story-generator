@@ -8,7 +8,7 @@ so I understood each piece as it came together. The result is a small app design
 ## Features
 - Pick a story - choose from several built-in templates across different genres.
 - Swap words inline - click any underlined word in a story to cycle through alternatives and reshape the sentence.
-- Generate - roll new word choices, an entirely new story, or both at once, with lock toggles to keep the story or the words fixed while changing the other.
+- Generate - roll a brand-new story with a fresh set of words in one click.
 - Create your own - write a custom story using {placeholder} syntax, define a list of words for each placeholder, and add it to your collection to play with.
 ## Built with
 - React - component-based UI, with state managed via hooks (useState, useMemo).

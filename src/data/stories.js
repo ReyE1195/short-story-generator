@@ -9,12 +9,12 @@ export const BUILT_IN_STORIES = [
         tag: "Medieval Fantasy",
         accent: "#c9a44c",
         template:
-            "In the kingdom of {kingdom} that never sees daylight, there is a {adjective} handsome prince named {heroName}. His duty was to rescue his people from the evil wizard {villainName}, who cursed the kingdom. Prince {heroName} would have to {verb} the evil wizard {villainName} to break the curse and free his kingdom from the shadows.",
+            "In the kingdom of {kingdom}, which never saw daylight, there lived a {adjective}, handsome prince named {heroName}. His duty was to rescue his people from the evil wizard {villainName}, who had cursed the kingdom. Prince {heroName} would have to {verb} the evil wizard {villainName} to break the curse and free his kingdom from the shadows.",
         slots: {
             kingdom: ["Orindoth", "Veldrun", "Astherion"],
             adjective: ["fierce", "noble", "battle-worn"],
             heroName: ["Deon", "Bruce", "Zion"],
-            villainName: ["Malzeth", "Vorkath", "Sarvok"],
+            villainName: ["Malzeth", "Morghast", "Sarvok"],
             verb: ["slay", "outwit", "banish"],
         },
     },
@@ -39,12 +39,12 @@ export const BUILT_IN_STORIES = [
         tag: "Comedy Sci-Fi",
         accent: "#c97b6a",
         template:
-            "Aboard the starship {shipName}, a {adjective} janitor named {heroName} is the last one awake when the ship's AI announces it has taken a wrong turn — right into the mouth of a {adjective2} space whale. {heroName} grabs the nearest {object} and must {verb} their way to the bridge before the whale finishes its {meal}. The captain, still in a bathrobe, insists this is fine, actually, and asks {heroName} to fetch coffee first.",
+            "Aboard the starship {shipName}, {adjective} janitor named {heroName} is the last one awake when the ship's AI announces it has taken a wrong turn — right into the mouth of {adjective2} space whale. {heroName} grabs the nearest {object} and must {verb} their way to the bridge before the whale finishes its {meal}. The captain, still in a bathrobe, insists this is fine, actually, and asks {heroName} to fetch coffee first.",
         slots: {
             shipName: ["Wobbly Comet", "USS Overdue", "Nightly Biscuit"],
-            adjective: ["sleep-deprived", "overconfident", "mildly cursed"],
-            heroName: ["Depa", "Ilsa", "Toran"],
-            adjective2: ["peckish", "enormous", "oddly polite"],
+            adjective: ["a sleep-deprived", "an overconfident", "a mildly cursed"],
+            heroName: ["Quill", "Bex", "Toran"],
+            adjective2: ["a peckish", "an enormous", "an oddly polite"],
             object: ["mop", "spatula", "fire extinguisher"],
             verb: ["waltz", "sprint", "cartwheel"],
             meal: ["snack", "midnight buffet", "appetizer"],

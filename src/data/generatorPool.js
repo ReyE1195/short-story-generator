@@ -43,7 +43,7 @@ export const BONUS_STORIES = [
             "Captain {heroName} kept a ledger of every debt owed across the {oceanName}, written in {ink}. When the {shipName} sank a merchant vessel carrying {cargo}, the ledger gained one more line — and one more enemy sworn to burn it. {heroName} only smiled. Paper doesn't float, but neither do grudges.",
         slots: {
             heroName: ["Vray", "Odalys", "Bram Kestrel"],
-            oceanName: ["Salt Wound Sea", "the Gray Fathoms", "the Widow's Strait"],
+            oceanName: ["Salt Wound Sea", "Gray Fathoms", "Widow's Strait"],
             ink: ["squid ink", "blood, allegedly", "something no one asked about"],
             shipName: ["Nightless Gull", "Iron Marrow", "Second Mourning"],
             cargo: ["stolen maps", "royal silver", "a caged singer"],
@@ -70,11 +70,11 @@ export const BONUS_STORIES = [
         tag: "Cyberpunk",
         accent: "#c94d8a",
         template:
-            "In {cityName}, memories could be repossessed like a car, and {heroName} owed three years' worth. A {adjective} fixer offered a way to wipe the debt — one {job} in the {corpName} tower, no questions. {heroName} took the job. {heroName} always took the job.",
+            "In {cityName}, memories could be repossessed like a car, and {heroName} owed three years' worth. {adjective} fixer offered a way to wipe the debt — one {job} in the {corpName} tower, no questions. {heroName} took the job. {heroName} always took the job.",
         slots: {
             cityName: ["New Halcyon", "Vantablack City", "Low Kowloon"],
             heroName: ["Reeve", "Ixchel", "Boone"],
-            adjective: ["chrome-toothed", "unreasonably calm", "twitchy"],
+            adjective: ["A chrome-toothed", "An unreasonably calm", "A twitchy"],
             job: ["data heist", "delivery", "assassination that wasn't supposed to be one"],
             corpName: ["Aegis-Nine", "Ouroboros Systems", "Halcyon Dynamics"],
         },
@@ -88,8 +88,8 @@ export const BONUS_STORIES = [
             "Ten years after {eventName}, {heroName} still walked the {distance} to the old seed vault every spring, just to check the locks held. This year the locks were broken, and {adjective} footprints led inside. {heroName} followed them, half hoping for {hope}, half bracing for {fear}.",
         slots: {
             eventName: ["the Long Winter", "the Collapse", "the last harvest"],
-            heroName: ["Odalis", "Teodor", "Wren Ashby"],
-            distance: ["nine miles", "two ridgelines", "the whole dead highway"],
+            heroName: ["Mirela", "Teodor", "Hollis Ashby"],
+            distance: ["nine miles", "two ridgelines", "whole dead highway"],
             adjective: ["small", "bare", "unfamiliar"],
             hope: ["company", "proof someone else made it", "good news for once"],
             fear: ["scavengers", "worse", "an empty vault"],
@@ -133,7 +133,7 @@ export const BONUS_STORIES = [
             "The plan was simple: while {distraction} played to a packed house, {heroName} and {partnerName} had eleven minutes to crack the vault beneath the opera house before the {device} reset. It went sideways in the way these things always go sideways — {complication} — and eleven minutes became one very long, very loud four.",
         slots: {
             distraction: ["the final act", "a fake bomb scare", "the mezzo-soprano's encore"],
-            heroName: ["Odile", "Marchetti", "Six"],
+            heroName: ["Odile", "Vesper", "Six"],
             partnerName: ["her brother", "a nervous locksmith", "someone she didn't fully trust yet"],
             device: ["pressure plates", "laser grid", "guard rotation"],
             complication: ["the safe had a second lock nobody knew about", "the guard rotation changed that week", "the soprano went off-script"],

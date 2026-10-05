@@ -1,5 +1,5 @@
 // Matches {slotName} placeholders inside a story template.
-export const SLOT_REGEX = /\{(\w+)\}/g;
+export const SLOT_REGEX = /\{(\w+)}/g;
 
 // Picks one random item from an array.
 export function pick(arr) {
@@ -17,7 +17,7 @@ export function defaultValuesFor(story) {
 }
 
 // Returns a story's slot values with a random option chosen from each word bank.
-// Used by the "Generate" button when word-locking is off.
+// Used by the "Generate" button to fill a story with fresh random words.
 export function randomValuesFor(story) {
     const values = {};
     Object.entries(story.slots || {}).forEach(([slot, options]) => {
